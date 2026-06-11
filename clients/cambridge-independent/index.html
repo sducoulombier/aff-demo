@@ -3,562 +3,872 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cambridge Independent</title>
-  <script type="text/javascript" src="https://sc.affilizz.com/affilizz.js" async></script>
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <title>The best skincare routines for glowing skin this winter – Cambridge Independent</title>
 
-    body { font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #222; background: #fff; }
+  <!-- Affilizz -->
+  <script type="text/javascript" src="https://sc.affilizz.com/affilizz.js" async></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+
+  <!-- Bootstrap 4 grid only -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <style>
+    /* ── RESET & BASE ── */
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: Ubuntu, Arial, sans-serif;
+      font-size: 14px;
+      color: #333;
+      background: #f5f5f5;
+      margin: 0; padding: 0;
+    }
     a { color: inherit; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    img { display: block; width: 100%; height: auto; }
+    img { max-width: 100%; height: auto; }
 
-    /* ── UTILITY BAR ── */
-    .utility-bar {
-      background: #1a1a1a;
-      color: #ccc;
-      font-size: 11px;
-      padding: 5px 0;
+    /* ── UTILITY BAR (FirstMenu) ── */
+    .FirstMenuWrap {
+      background: #fff;
+      border-bottom: 1px solid #e8e8e8;
     }
-    .utility-bar .inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 16px;
+    .FirstMenu {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding: 6px 0;
+      font-size: 12px;
+      font-weight: 500;
+      color: #555;
+    }
+    .FirstMenu ul {
+      list-style: none;
+      margin: 0; padding: 0;
+      display: flex;
       flex-wrap: wrap;
-      gap: 4px;
+      align-items: center;
+      gap: 0;
     }
-    .utility-bar .links { display: flex; flex-wrap: wrap; gap: 12px; }
-    .utility-bar a { color: #ccc; }
-    .utility-bar a:hover { color: #fff; text-decoration: none; }
-    .utility-bar .right { display: flex; align-items: center; gap: 12px; }
-    .utility-bar .social { display: flex; gap: 8px; }
-    .utility-bar .social a {
-      display: flex; align-items: center; justify-content: center;
-      width: 24px; height: 24px;
-      background: #444; border-radius: 3px; color: #fff; font-size: 12px; font-weight: bold;
+    .FirstMenu ul li { display: flex; align-items: center; }
+    .FirstMenu ul li a { padding: 0 6px; color: #555; white-space: nowrap; }
+    .FirstMenu ul li a:hover { color: #000; text-decoration: none; }
+    .FirstMenu ul li.sep { color: #ccc; padding: 0 2px; }
+    .FirstMenu .socialsearch {
+      display: flex; align-items: center; gap: 10px;
     }
-    .btn-subscribe {
-      background: #e31e24; color: #fff !important; padding: 4px 12px;
-      border-radius: 3px; font-weight: bold; font-size: 11px;
-      text-decoration: none !important;
-    }
+    .FirstMenu .socialsearch a { color: #555; font-size: 14px; }
+    .FirstMenu .socialsearch a:hover { color: #000; text-decoration: none; }
+    .TwitXB { width: 18px; height: 18px; object-fit: contain; }
 
-    /* ── HEADER / LOGO ── */
-    .site-header {
-      border-bottom: 3px solid #e31e24;
-      padding: 12px 0 0;
+    /* ── LOGO SECTION ── */
+    .LogoSection {
+      background: #fff;
+      padding: 15px 0;
+      border-bottom: 1px solid #eee;
     }
-    .site-header .inner {
-      max-width: 1200px; margin: 0 auto; padding: 0 16px;
-      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    .LogoSection .inner {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-    .site-logo { display: flex; flex-direction: column; line-height: 1; }
-    .site-logo .name {
-      font-size: 28px; font-weight: 900; letter-spacing: -1px; color: #1a1a1a;
-      font-family: Georgia, serif;
+    .LogoSection .ci-logo {
+      height: 60px;
+      width: auto;
     }
-    .site-logo .since { font-size: 10px; letter-spacing: 2px; color: #888; text-transform: uppercase; }
-    .weather-widget { font-size: 12px; color: #555; text-align: right; }
-    .weather-widget .temp { font-size: 22px; font-weight: bold; color: #222; }
+    .LogoSection p {
+      font-family: 'Roboto Slab', serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #a8bdb8;
+      margin: 0;
+      align-self: flex-end;
+      padding-bottom: 4px;
+    }
+    .WeatherHome {
+      margin-left: auto;
+      text-align: right;
+    }
+    .WeatherHome a { color: #333; text-decoration: none; }
+    .WeatherHome .Temp { font-size: 22px; font-weight: 700; }
+    .WeatherHome .TempLater { font-size: 14px; color: #999; }
+    .WeatherHome .FiveDays { font-size: 11px; color: #a8bdb8; display: block; margin-top: 2px; }
 
-    /* ── MAIN NAV ── */
-    nav.main-nav {
-      background: #1a1a1a;
-      margin-top: 10px;
+    /* ── DESKTOP MENU BAR ── */
+    .DesktopMenuBar {
+      background: #a8bdb8;
+      position: relative;
     }
-    nav.main-nav ul {
-      max-width: 1200px; margin: 0 auto; padding: 0 16px;
-      list-style: none; display: flex; flex-wrap: wrap;
+    .DesktopMenuBar .inner {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
     }
-    nav.main-nav > ul > li { position: relative; }
-    nav.main-nav > ul > li > a {
-      display: block; padding: 10px 12px;
-      color: #fff; font-size: 13px; font-weight: bold;
-      text-transform: uppercase; letter-spacing: 0.3px;
+    .LeftMenu > ul {
+      list-style: none;
+      margin: 0; padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .LeftMenu > ul > li {
+      position: relative;
+    }
+    .LeftMenu > ul > li > span > a {
+      display: block;
+      padding: 12px 13px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
       white-space: nowrap;
     }
-    nav.main-nav > ul > li > a:hover,
-    nav.main-nav > ul > li:hover > a { background: #e31e24; text-decoration: none; }
-
-    nav.main-nav .dropdown {
-      display: none; position: absolute; top: 100%; left: 0;
-      background: #fff; border: 1px solid #ddd; border-top: 3px solid #e31e24;
-      min-width: 200px; z-index: 100; box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    .LeftMenu > ul > li > span > a:hover,
+    .LeftMenu > ul > li:hover > span > a {
+      background: rgba(0,0,0,0.15);
+      text-decoration: none;
     }
-    nav.main-nav li:hover .dropdown { display: block; }
-    nav.main-nav .dropdown li a {
-      display: block; padding: 8px 14px; font-size: 13px; color: #333;
-      border-bottom: 1px solid #f0f0f0;
-    }
-    nav.main-nav .dropdown li a:hover { background: #f5f5f5; text-decoration: none; }
-
-    /* ── PAGE WRAPPER ── */
-    .page-wrap {
-      max-width: 1200px; margin: 20px auto; padding: 0 16px;
-      display: grid; grid-template-columns: 1fr 300px; gap: 24px;
+    .LeftMenu > ul > li > span > a.selected {
+      font-weight: 700;
+      text-decoration: underline;
     }
 
-    /* ── HERO ── */
-    .hero { margin-bottom: 24px; }
-    .hero .hero-img { position: relative; }
-    .hero .hero-img img { max-height: 420px; object-fit: cover; }
-    .hero .hero-label {
-      display: inline-block; background: #e31e24; color: #fff;
-      font-size: 11px; font-weight: bold; text-transform: uppercase;
-      padding: 3px 8px; margin-bottom: 8px; letter-spacing: 0.5px;
+    .menuChildren {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #a8bdb8;
+      min-width: 200px;
+      z-index: 200;
+      box-shadow: 0 4px 10px rgba(0,0,0,.2);
     }
-    .hero h1 {
-      font-size: 28px; font-family: Georgia, serif; line-height: 1.3;
-      color: #1a1a1a; margin: 10px 0 8px;
+    .LeftMenu > ul > li:hover .menuChildren { display: block; }
+    .menuChildren ul { list-style: none; margin: 0; padding: 0; }
+    .menuChildren ul li a {
+      display: block;
+      padding: 8px 14px;
+      color: #fff;
+      font-size: 13px;
+      border-bottom: 1px solid rgba(255,255,255,.15);
     }
-    .hero p { font-size: 14px; color: #555; line-height: 1.6; }
+    .menuChildren ul li a:hover { background: rgba(0,0,0,.1); text-decoration: none; }
 
-    /* ── SECTION TITLES ── */
-    .section-title {
-      font-size: 16px; font-weight: bold; text-transform: uppercase;
-      letter-spacing: 0.5px; border-bottom: 3px solid #e31e24;
-      padding-bottom: 6px; margin-bottom: 16px; color: #1a1a1a;
+    .LoginBtn {
+      display: flex;
+      align-items: center;
+    }
+    .LoginBtn button {
+      background: none;
+      border: 1px solid rgba(255,255,255,.5);
+      color: #fff;
+      padding: 6px 14px;
+      font-size: 13px;
+      cursor: pointer;
+      font-family: Ubuntu, Arial, sans-serif;
+    }
+    .LoginBtn button:hover { background: rgba(255,255,255,.15); }
+
+    /* ── LEADERBOARD AD AREA ── */
+    .leaderboard {
+      padding: 16px 0 0;
+      text-align: center;
+    }
+    .leaderboard .ad-placeholder {
+      display: inline-block;
+      background: #e9e9e9;
+      border: 1px dashed #ccc;
+      color: #aaa;
+      font-size: 11px;
+      text-align: center;
+      line-height: 90px;
+      width: 728px;
+      height: 90px;
     }
 
-    /* ── ARTICLE GRID ── */
-    .article-section { margin-bottom: 32px; }
-    .article-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .article-card { display: flex; flex-direction: column; }
-    .article-card .card-img { overflow: hidden; margin-bottom: 10px; }
-    .article-card .card-img img { height: 160px; object-fit: cover; transition: transform .3s; }
-    .article-card:hover .card-img img { transform: scale(1.03); }
-    .article-card .card-tag {
-      font-size: 10px; font-weight: bold; text-transform: uppercase;
-      color: #e31e24; letter-spacing: 0.5px; margin-bottom: 4px;
+    /* ── BREADCRUMB ── */
+    .Bread {
+      padding: 16px 0 8px;
+      font-size: 12px;
+      color: #888;
     }
-    .article-card h3 {
-      font-size: 15px; font-family: Georgia, serif; line-height: 1.4;
-      color: #1a1a1a; margin-bottom: 6px;
-    }
-    .article-card h3 a:hover { color: #e31e24; text-decoration: none; }
-    .article-card p { font-size: 12px; color: #666; line-height: 1.5; }
+    .Bread a { color: #56867a; }
+    .Bread a:hover { text-decoration: underline; }
+    .Bread .fa-angle-right { margin: 0 4px; font-size: 11px; }
 
-    /* ── ARTICLE LIST (2-col with big image) ── */
-    .article-list { display: flex; flex-direction: column; gap: 16px; }
-    .article-row {
-      display: grid; grid-template-columns: 120px 1fr; gap: 12px; align-items: start;
+    /* ── SUBSCRIBE TAB ── */
+    .SubscribeTab {
+      position: fixed;
+      right: 0; top: 50%;
+      transform: translateY(-50%) rotate(90deg) translateX(50%);
+      transform-origin: right center;
+      background: #56867a;
+      z-index: 100;
     }
-    .article-row .row-img img { height: 80px; object-fit: cover; }
-    .article-row h3 { font-size: 14px; font-family: Georgia, serif; line-height: 1.4; }
-    .article-row p { font-size: 12px; color: #666; margin-top: 4px; }
+    .SubscribeTab a {
+      display: block;
+      padding: 6px 14px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .SubscribeTab a:hover { text-decoration: none; background: #3d6b60; }
+
+    /* ── MAIN LAYOUT ── */
+    #EWrap { background: #f5f5f5; }
+    .white { background: #fff; }
+    .ArticleInner { padding: 20px 20px 20px 0; }
+
+    /* ── ARTICLE ── */
+    .article-section-tag {
+      display: inline-block;
+      background: #f04d22;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 3px 10px;
+      margin-bottom: 12px;
+    }
+    article h1 {
+      font-family: Ubuntu, Arial, sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.3;
+      color: #111;
+      margin-bottom: 12px;
+    }
+    .article-meta {
+      font-size: 12px;
+      color: #888;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .article-meta .author { font-weight: 700; color: #56867a; }
+    .article-meta .date { }
+    .article-social { display: flex; gap: 8px; margin-left: auto; }
+    .article-social a {
+      display: flex; align-items: center; justify-content: center;
+      width: 28px; height: 28px; border-radius: 50%;
+      color: #fff; font-size: 13px;
+    }
+    .article-social .fb { background: #3b5998; }
+    .article-social .tw { background: #1da1f2; }
+    .article-social .em { background: #888; }
+
+    .hero-img {
+      margin-bottom: 8px;
+    }
+    .hero-img img {
+      width: 100%;
+      max-height: 460px;
+      object-fit: cover;
+      display: block;
+    }
+    .hero-caption {
+      font-size: 11px;
+      color: #888;
+      padding: 4px 0 16px;
+      font-style: italic;
+    }
+
+    .pagestory p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 16px;
+    }
+    .pagestory h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 24px 0 12px;
+      color: #111;
+    }
+    .pagestory figure {
+      margin: 20px 0;
+    }
+    .pagestory figure img {
+      width: 100%;
+      object-fit: cover;
+    }
+    .pagestory figure figcaption {
+      font-size: 11px;
+      color: #888;
+      font-style: italic;
+      padding: 4px 0;
+    }
+    .pagestory blockquote {
+      border-left: 4px solid #56867a;
+      margin: 20px 0;
+      padding: 10px 20px;
+      font-size: 17px;
+      font-style: italic;
+      color: #555;
+      background: #f9f9f9;
+    }
+
+    /* in-article affilizz widget slot */
+    .affilizz-slot {
+      margin: 24px 0;
+      min-height: 60px;
+    }
+
+    /* ── CATEGORY TAGS ── */
+    .CatKey {
+      margin: 20px 0;
+      display: flex; flex-wrap: wrap; gap: 8px;
+    }
+    .CatKey a {
+      background: #e8e8e8;
+      padding: 4px 12px;
+      font-size: 12px;
+      color: #555;
+      border-radius: 3px;
+    }
+    .CatKey a:hover { background: #56867a; color: #fff; text-decoration: none; }
 
     /* ── SIDEBAR ── */
-    .sidebar { display: flex; flex-direction: column; gap: 20px; }
-    .sidebar-box {
-      border: 1px solid #e0e0e0; padding: 16px;
+    .sidebar { padding: 20px 0 20px 20px; }
+    .ArticleSidebar { }
+
+    .titleline_color {
+      border-bottom: 5px solid #56867a;
+      margin-bottom: 12px;
     }
-    .sidebar-box .box-title {
-      font-size: 13px; font-weight: bold; text-transform: uppercase;
-      letter-spacing: 0.5px; border-bottom: 2px solid #e31e24;
-      padding-bottom: 6px; margin-bottom: 12px;
+    .title_color {
+      display: inline-block;
+      background: #56867a;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 5px 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
     }
-    .subscribe-box {
-      background: #1a1a1a; color: #fff; padding: 20px; text-align: center;
+
+    .MPUMulti {
+      text-align: center;
+      margin-bottom: 20px;
     }
-    .subscribe-box h3 { font-size: 16px; margin-bottom: 8px; }
-    .subscribe-box p { font-size: 12px; color: #aaa; margin-bottom: 14px; }
-    .subscribe-box a {
-      display: inline-block; background: #e31e24; color: #fff;
-      padding: 10px 20px; font-weight: bold; font-size: 13px;
+    .ad-box {
+      display: inline-block;
+      background: #e9e9e9;
+      border: 1px dashed #ccc;
+      color: #aaa;
+      font-size: 11px;
+      text-align: center;
+      line-height: 1.4;
+      padding-top: 120px;
+      width: 300px;
+      height: 250px;
     }
-    .promo-box img { margin-bottom: 8px; }
-    .promo-box p { font-size: 12px; color: #555; line-height: 1.5; }
-    .promo-box a.promo-link {
-      display: inline-block; margin-top: 8px; font-size: 12px;
-      font-weight: bold; color: #e31e24;
+
+    .most-read-list {
+      list-style: none;
+      margin: 0; padding: 0;
     }
+    .most-read-list li {
+      border-bottom: 1px solid #eee;
+      padding: 10px 0;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .most-read-list li .num {
+      font-size: 22px;
+      font-weight: 700;
+      color: #ddd;
+      line-height: 1;
+      flex-shrink: 0;
+      width: 28px;
+    }
+    .most-read-list li a {
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.4;
+      color: #222;
+    }
+    .most-read-list li a:hover { color: #56867a; text-decoration: none; }
+
+    .promo-block {
+      border: 1px solid #e0e0e0;
+      margin-bottom: 20px;
+      padding: 16px;
+      text-align: center;
+      background: #fff;
+    }
+    .promo-block img { margin-bottom: 10px; }
+    .promo-block p { font-size: 12px; color: #555; line-height: 1.5; margin-bottom: 8px; }
+    .promo-block a.promo-cta {
+      display: inline-block;
+      background: #56867a;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 7px 16px;
+    }
+    .promo-block a.promo-cta:hover { background: #3d6b60; text-decoration: none; }
 
     /* ── FOOTER ── */
     footer {
-      background: #1a1a1a; color: #ccc; margin-top: 40px; padding: 32px 0 0;
+      background: #303030;
+      color: #fff;
+      padding: 30px 0 0;
+      margin-top: 30px;
     }
-    .footer-inner {
-      max-width: 1200px; margin: 0 auto; padding: 0 16px;
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
-    }
-    .footer-col h4 {
-      font-size: 13px; font-weight: bold; text-transform: uppercase;
-      color: #fff; letter-spacing: 0.5px; margin-bottom: 14px;
-    }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-    .footer-col ul li a { font-size: 12px; color: #aaa; }
-    .footer-col ul li a:hover { color: #fff; text-decoration: none; }
+    footer .iliffe-logo { max-width: 160px; margin-bottom: 10px; filter: brightness(0) invert(1); opacity: .7; }
+    footer .footer-social { display: flex; align-items: center; gap: 14px; margin-top: 10px; }
+    footer .footer-social a { color: #aaa; font-size: 18px; }
+    footer .footer-social a:hover { color: #fff; text-decoration: none; }
+    footer .footer-social .FootX { width: 20px; height: 20px; filter: brightness(0) invert(1); opacity: .6; }
+    footer hr.custom { border-color: #555; margin: 20px 0; }
+    footer ul { list-style: none; padding: 0; margin: 0; }
+    footer ul li { margin-bottom: 8px; }
+    footer ul li a { color: #aaa; font-size: 13px; }
+    footer ul li a:hover { color: #00adef; text-decoration: none; }
+    .IPSOLogo { max-width: 90px; }
     .footer-bottom {
-      border-top: 1px solid #333; margin-top: 28px;
-      padding: 16px; text-align: center; font-size: 11px; color: #666;
+      border-top: 1px solid #444;
+      padding: 14px 0;
+      margin-top: 20px;
+      font-size: 11px;
+      color: #888;
     }
-    .footer-bottom a { color: #888; margin: 0 6px; }
-    .footer-bottom a:hover { color: #fff; }
-    .ipso {
-      display: inline-block; border: 1px solid #555;
-      font-size: 10px; padding: 2px 8px; color: #888; margin-top: 6px;
-      letter-spacing: 1px; text-transform: uppercase;
-    }
+    .footer-bottom a { color: #888; }
+    .footer-bottom a:hover { color: #00adef; text-decoration: none; }
   </style>
 </head>
 <body>
 
 <!-- ── UTILITY BAR ── -->
-<div class="utility-bar">
-  <div class="inner">
-    <div class="links">
-      <a href="#">Sign in</a>
-      <a href="#">Premium site</a>
-      <a href="#">Buy a photo</a>
-      <a href="#">E-edition</a>
-      <a href="#">Iliffe Media</a>
-      <a href="#">About us</a>
-      <a href="#">Advertise</a>
-      <a href="#">Public Notices</a>
-      <a href="#">Jobs</a>
-      <a href="#">Announcements</a>
-      <a href="#">Newsletter</a>
-      <a href="#">Velvet Mag</a>
-      <a href="#">Contact</a>
-    </div>
-    <div class="right">
-      <div class="social">
-        <a href="#" title="Twitter/X">𝕏</a>
-        <a href="#" title="Facebook">f</a>
+<div class="FirstMenuWrap">
+  <div class="container">
+    <div class="FirstMenu">
+      <ul>
+        <li><a href="#">Premium site</a></li>
+        <li class="sep">|</li>
+        <li><a href="#">Buy a photo</a></li>
+        <li class="sep">|</li>
+        <li><a href="#">E-edition</a></li>
+        <li class="sep">|</li>
+        <li><a href="#">Iliffe Media</a></li>
+        <li class="sep">|</li>
+        <li><a href="#">Jobs</a></li>
+        <li class="sep">|</li>
+        <li><a href="#">Public Notices</a></li>
+        <li class="sep">|</li>
+        <li><a href="#">Announcements</a></li>
+        <li class="sep">|</li>
+        <li><a href="#">Newsletter</a></li>
+        <li class="sep">|</li>
+        <li><a href="#">Contact</a></li>
+        <li class="sep">|</li>
+        <li><a href="#">Advertise</a></li>
+      </ul>
+      <div class="socialsearch">
+        <a href="#" target="_blank"><img src="https://www.cambridgeindependent.co.uk/_assets/twitterxemail.jpg" class="TwitXB" alt="X/Twitter"/></a>
+        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fas fa-search"></i></a>
       </div>
-      <a href="#" class="btn-subscribe">Subscribe</a>
     </div>
   </div>
 </div>
 
-<!-- ── HEADER ── -->
-<header class="site-header">
-  <div class="inner">
-    <div class="site-logo">
-      <span class="name">Cambridge Independent</span>
-      <span class="since">Since 1819</span>
+<!-- ── LOGO SECTION ── -->
+<div class="LogoSection">
+  <div class="container">
+    <div class="inner">
+      <a href="#">
+        <img src="https://www.cambridgeindependent.co.uk/_assets/cambridgeinde-logo.svg" alt="Cambridge Independent" class="ci-logo"/>
+      </a>
+      <p class="ml-2 mb-0">SINCE 1819</p>
+      <div class="WeatherHome d-none d-lg-block">
+        <a href="#">
+          <span class="Temp">16°</span><span class="TempLater"> | 6°</span>
+          <span class="FiveDays">5 days <i class="fa fa-angle-right"></i></span>
+        </a>
+      </div>
     </div>
-    <div class="weather-widget">
-      <div class="temp">16°C</div>
-      <div>Cambridge · Partly cloudy</div>
+  </div>
+</div>
+
+<!-- ── DESKTOP MENU BAR ── -->
+<div class="DesktopMenuBar d-none d-lg-block">
+  <div class="container">
+    <div class="inner">
+      <div class="LeftMenu">
+        <ul>
+          <li><span><a href="#">Home</a></span></li>
+          <li class="Parent">
+            <span><a href="#">News</a></span>
+            <div class="menuChildren"><ul>
+              <li><a href="#">Cambridge</a></li>
+              <li><a href="#">Combined Authority</a></li>
+              <li><a href="#">Crime</a></li>
+              <li><a href="#">East Cambridgeshire</a></li>
+              <li><a href="#">Environment</a></li>
+              <li><a href="#">Health</a></li>
+              <li><a href="#">Latest News</a></li>
+              <li><a href="#">Nostalgia</a></li>
+              <li><a href="#">Politics</a></li>
+              <li><a href="#">South Cambridgeshire</a></li>
+              <li><a href="#">Videos</a></li>
+            </ul></div>
+          </li>
+          <li class="Parent">
+            <span><a href="#">Sport</a></span>
+            <div class="menuChildren"><ul>
+              <li><a href="#">Football</a></li>
+              <li><a href="#">Cricket</a></li>
+              <li><a href="#">Cambridge United</a></li>
+              <li><a href="#">Rugby</a></li>
+              <li><a href="#">Hockey</a></li>
+              <li><a href="#">Rowing</a></li>
+              <li><a href="#">Youth Sport</a></li>
+              <li><a href="#">Other Sports</a></li>
+            </ul></div>
+          </li>
+          <li class="Parent">
+            <span><a href="#" class="selected">What's On</a></span>
+            <div class="menuChildren"><ul>
+              <li><a href="#">Events and Festivals</a></li>
+              <li><a href="#">Iliffe Tickets</a></li>
+              <li><a href="#">Music</a></li>
+              <li><a href="#">Theatre</a></li>
+              <li><a href="#">Comedy</a></li>
+              <li><a href="#">Art</a></li>
+              <li><a href="#">Books</a></li>
+              <li><a href="#">Museums</a></li>
+              <li><a href="#">TV and Film</a></li>
+              <li><a href="#">Places to visit</a></li>
+            </ul></div>
+          </li>
+          <li class="Parent">
+            <span><a href="#">Lifestyle</a></span>
+            <div class="menuChildren"><ul>
+              <li><a href="#">Food and Drink</a></li>
+              <li><a href="#">Shopping</a></li>
+              <li><a href="#">Gardening</a></li>
+              <li><a href="#">Nature</a></li>
+              <li><a href="#">Photography</a></li>
+              <li><a href="#">Travel</a></li>
+              <li><a href="#">Velvet</a></li>
+              <li><a href="#">Visit East Anglia</a></li>
+            </ul></div>
+          </li>
+          <li class="Parent">
+            <span><a href="#">Education</a></span>
+            <div class="menuChildren"><ul>
+              <li><a href="#">Education Directory</a></li>
+              <li><a href="#">Schools</a></li>
+              <li><a href="#">Cambridge University</a></li>
+              <li><a href="#">Anglia Ruskin University</a></li>
+              <li><a href="#">Cambridge Regional College</a></li>
+            </ul></div>
+          </li>
+          <li><span><a href="#">Science</a></span></li>
+          <li class="Parent">
+            <span><a href="#">Business</a></span>
+            <div class="menuChildren"><ul>
+              <li><a href="#">Business Awards</a></li>
+              <li><a href="#">Business Directory</a></li>
+              <li><a href="#">Business News</a></li>
+              <li><a href="#">Interviews</a></li>
+              <li><a href="#">Life Science</a></li>
+              <li><a href="#">Technology</a></li>
+              <li><a href="#">IQ Magazine</a></li>
+            </ul></div>
+          </li>
+          <li><span><a href="#">Property</a></span></li>
+          <li class="Parent">
+            <span><a href="#">Motors</a></span>
+            <div class="menuChildren"><ul>
+              <li><a href="#">Motoring News</a></li>
+              <li><a href="#">Cycling</a></li>
+              <li><a href="#">Live Traffic Map</a></li>
+            </ul></div>
+          </li>
+          <li><span><a href="#">Offers</a></span></li>
+          <li><span><a href="#">Awards</a></span></li>
+          <li><span><a href="#">Subscribe</a></span></li>
+        </ul>
+      </div>
+      <div class="LoginBtn">
+        <button type="button">Sign In <i class="fas fa-user-circle"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── SUBSCRIBE TAB ── -->
+<div class="SubscribeTab d-none d-lg-block">
+  <a href="#"><b>Subscribe Now</b></a>
+</div>
+
+<!-- ── MAIN CONTENT ── -->
+<div id="EWrap">
+  <div class="container white">
+
+    <!-- LEADERBOARD -->
+    <div class="leaderboard text-center">
+      <div class="ad-placeholder">Ad · 728×90</div>
+    </div>
+
+    <!-- BREADCRUMB -->
+    <div class="Bread text-center">
+      <p>
+        <a href="#"><i class="fa fa-home"></i> Home</a>
+        <i class="fa fa-angle-right"></i>
+        <a href="#">Lifestyle</a>
+        <i class="fa fa-angle-right"></i>
+        Beauty &amp; Skincare
+      </p>
     </div>
   </div>
 
-  <!-- ── MAIN NAV ── -->
-  <nav class="main-nav">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li>
-        <a href="#">News ▾</a>
-        <ul class="dropdown">
-          <li><a href="#">Cambridge</a></li>
-          <li><a href="#">Combined Authority</a></li>
-          <li><a href="#">Crime</a></li>
-          <li><a href="#">East Cambridgeshire</a></li>
-          <li><a href="#">East West Rail</a></li>
-          <li><a href="#">Environment</a></li>
-          <li><a href="#">Health</a></li>
-          <li><a href="#">Latest News</a></li>
-          <li><a href="#">Nostalgia</a></li>
-          <li><a href="#">Politics</a></li>
-          <li><a href="#">South Cambridgeshire</a></li>
-          <li><a href="#">Videos</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">Sport ▾</a>
-        <ul class="dropdown">
-          <li><a href="#">Football</a></li>
-          <li><a href="#">Cricket</a></li>
-          <li><a href="#">Cambridge United</a></li>
-          <li><a href="#">Cambridge Rugby Club</a></li>
-          <li><a href="#">Cambridge City</a></li>
-          <li><a href="#">Histon FC</a></li>
-          <li><a href="#">Rugby</a></li>
-          <li><a href="#">Hockey</a></li>
-          <li><a href="#">Cambridge University Sport</a></li>
-          <li><a href="#">Rowing</a></li>
-          <li><a href="#">Youth Sport</a></li>
-          <li><a href="#">Other Sports</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">What's On ▾</a>
-        <ul class="dropdown">
-          <li><a href="#">Events and Festivals</a></li>
-          <li><a href="#">Iliffe Tickets</a></li>
-          <li><a href="#">Music</a></li>
-          <li><a href="#">Theatre</a></li>
-          <li><a href="#">Comedy</a></li>
-          <li><a href="#">Art</a></li>
-          <li><a href="#">Books</a></li>
-          <li><a href="#">Museums</a></li>
-          <li><a href="#">TV and Film</a></li>
-          <li><a href="#">Places to visit</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">Lifestyle ▾</a>
-        <ul class="dropdown">
-          <li><a href="#">Food and Drink</a></li>
-          <li><a href="#">Shopping</a></li>
-          <li><a href="#">Gardening</a></li>
-          <li><a href="#">Nature</a></li>
-          <li><a href="#">Photography</a></li>
-          <li><a href="#">Travel</a></li>
-          <li><a href="#">Velvet</a></li>
-          <li><a href="#">Visit East Anglia</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">Education ▾</a>
-        <ul class="dropdown">
-          <li><a href="#">Education Directory</a></li>
-          <li><a href="#">Schools</a></li>
-          <li><a href="#">Cambridge University</a></li>
-          <li><a href="#">Anglia Ruskin University</a></li>
-          <li><a href="#">Cambridge Regional College</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Science</a></li>
-      <li>
-        <a href="#">Business ▾</a>
-        <ul class="dropdown">
-          <li><a href="#">Business Awards</a></li>
-          <li><a href="#">Business Directory</a></li>
-          <li><a href="#">Business News</a></li>
-          <li><a href="#">Interviews</a></li>
-          <li><a href="#">Law</a></li>
-          <li><a href="#">Life Science</a></li>
-          <li><a href="#">Technology</a></li>
-          <li><a href="#">Science and Technology Awards</a></li>
-          <li><a href="#">IQ Magazine</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Property</a></li>
-      <li>
-        <a href="#">Motors ▾</a>
-        <ul class="dropdown">
-          <li><a href="#">Motoring News</a></li>
-          <li><a href="#">Cycling</a></li>
-          <li><a href="#">Live Traffic Map</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Offers</a></li>
-      <li><a href="#">Awards</a></li>
-      <li><a href="#" class="btn-subscribe" style="margin: 5px 0 5px 8px;">Subscribe</a></li>
-    </ul>
-  </nav>
-</header>
+  <div class="container white">
+    <div class="row">
 
-<!-- ── MAIN CONTENT ── -->
-<div class="page-wrap">
-  <main>
+      <!-- ── ARTICLE COLUMN ── -->
+      <div class="col-lg-8 ArticleInner">
+        <article>
 
-    <!-- HERO -->
-    <div class="hero">
-      <span class="hero-label">Health &amp; Wellness</span>
-      <div class="hero-img">
-        <img src="https://picsum.photos/seed/hero-health/860/420" alt="Hero" />
-      </div>
-      <h1>Cambridge researchers reveal how a simple daily skincare routine could significantly reduce signs of ageing, experts say</h1>
-      <p>A new study published by dermatologists at the University of Cambridge suggests that consistent moisturising habits, combined with SPF protection, can dramatically slow the visible effects of ageing. The findings have prompted renewed interest in affordable skincare products across the region.</p>
-    </div>
+          <span class="article-section-tag">Beauty &amp; Skincare</span>
 
-    <!-- SECTION: Featured -->
-    <div class="article-section">
-      <div class="section-title">Featured Stories</div>
-      <div class="article-grid">
-        <div class="article-card">
-          <div class="card-img"><img src="https://picsum.photos/seed/skin1/400/250" alt="" /></div>
-          <div class="card-tag">Skincare</div>
-          <h3><a href="#">Five ingredients dermatologists say you should look for in a moisturiser this winter</a></h3>
-          <p>Hyaluronic acid, niacinamide and ceramides top the list of must-have compounds in any effective winter skincare regime.</p>
-        </div>
-        <div class="article-card">
-          <div class="card-img"><img src="https://picsum.photos/seed/health2/400/250" alt="" /></div>
-          <div class="card-tag">Wellness</div>
-          <h3><a href="#">How Cambridge's wellness clinics are leading the charge on preventative health</a></h3>
-          <p>A new generation of health clinics across the city is focusing on prevention rather than cure, with personalised nutrition plans and biometric tracking.</p>
-        </div>
-        <div class="article-card">
-          <div class="card-img"><img src="https://picsum.photos/seed/beauty3/400/250" alt="" /></div>
-          <div class="card-tag">Beauty</div>
-          <h3><a href="#">Local beauty brands making waves with sustainable, cruelty-free cosmetic lines</a></h3>
-          <p>Cambridgeshire entrepreneurs are launching eco-conscious beauty brands, drawing attention from buyers across the UK and Europe.</p>
-        </div>
-      </div>
-    </div>
+          <h1>The best skincare routines for glowing, healthy skin this winter — dermatologists share their top tips</h1>
 
-    <!-- SECTION: Health -->
-    <div class="article-section">
-      <div class="section-title">Health</div>
-      <div class="article-grid">
-        <div class="article-card">
-          <div class="card-img"><img src="https://picsum.photos/seed/health4/400/250" alt="" /></div>
-          <div class="card-tag">Nutrition</div>
-          <h3><a href="#">The gut-skin connection: how what you eat shapes your complexion</a></h3>
-          <p>Nutritionists explain the growing body of evidence linking digestive health to skin clarity and reduced inflammation.</p>
-        </div>
-        <div class="article-card">
-          <div class="card-img"><img src="https://picsum.photos/seed/health5/400/250" alt="" /></div>
-          <div class="card-tag">Mental Health</div>
-          <h3><a href="#">Mind and skin: the surprising links between stress and dermatological conditions</a></h3>
-          <p>Eczema, psoriasis and acne flare-ups have all been linked to periods of prolonged stress, according to researchers.</p>
-        </div>
-        <div class="article-card">
-          <div class="card-img"><img src="https://picsum.photos/seed/health6/400/250" alt="" /></div>
-          <div class="card-tag">Fitness</div>
-          <h3><a href="#">Exercise and its unexpected benefits for skin radiance and anti-ageing</a></h3>
-          <p>Regular physical activity boosts circulation and collagen production — two key factors in maintaining youthful-looking skin.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION: Beauty & Cosmetics -->
-    <div class="article-section">
-      <div class="section-title">Beauty &amp; Cosmetics</div>
-      <div class="article-list">
-        <div class="article-row">
-          <div class="row-img"><img src="https://picsum.photos/seed/cos1/200/120" alt="" /></div>
-          <div>
-            <h3><a href="#">Review: the top-rated SPF50 facial sunscreens that won't leave a white cast</a></h3>
-            <p>We tested 12 leading sun protection products so you don't have to — here are the ones genuinely worth buying.</p>
+          <div class="article-meta">
+            <span class="author">By Emily Thornton</span>
+            <span class="date">11 June 2026, 09:30</span>
+            <div class="article-social">
+              <a href="#" class="fb"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="tw"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="em"><i class="fas fa-envelope"></i></a>
+            </div>
           </div>
-        </div>
-        <div class="article-row">
-          <div class="row-img"><img src="https://picsum.photos/seed/cos2/200/120" alt="" /></div>
-          <div>
-            <h3><a href="#">Retinol vs bakuchiol: which anti-ageing ingredient is right for your skin type?</a></h3>
-            <p>Both promise smoother, firmer skin — but the differences in tolerability and speed of results are significant.</p>
+
+          <div class="pagestory">
+
+            <div class="hero-img">
+              <img src="https://picsum.photos/seed/skincare-hero/800/460" alt="Skincare products laid out on a marble surface"/>
+            </div>
+            <p class="hero-caption">A curated selection of winter skincare essentials recommended by Cambridge dermatologists. Photo: Unsplash</p>
+
+            <p>As temperatures drop and central heating kicks in across Cambridgeshire, skin experts are warning that now is the time to overhaul your daily skincare regime — before dryness, flaking and dullness take hold for the season.</p>
+
+            <p>We spoke to three leading dermatologists based in Cambridge to find out exactly which ingredients, products and habits are worth investing in this winter, and which popular trends are simply not worth the hype.</p>
+
+            <!-- AFFILIZZ WIDGET SLOT 1 -->
+            <div class="affilizz-slot" id="affilizz-slot-1">
+              <!-- Widget Affilizz ici -->
+            </div>
+
+            <h2>Start with a gentle, hydrating cleanser</h2>
+
+            <p>"The single biggest mistake I see patients make in winter is continuing to use the same foaming cleanser they used in summer," says Dr Hannah Clarke, consultant dermatologist at Addenbrooke's Hospital. "Foaming cleansers can strip the skin's natural lipid barrier, and in cold weather that barrier is already under stress."</p>
+
+            <p>Instead, she recommends switching to a cream or oil-based cleanser for the colder months — something that removes make-up and daily grime without leaving skin feeling tight. Look for formulas containing glycerin, squalane or ceramides on the ingredient list.</p>
+
+            <figure>
+              <img src="https://picsum.photos/seed/cleanser-prod/800/400" alt="Cream cleanser being applied to skin"/>
+              <figcaption>Cream-based cleansers help preserve the skin's moisture barrier during colder months. Photo: Pexels</figcaption>
+            </figure>
+
+            <h2>Layer your moisturiser — correctly</h2>
+
+            <p>The cardinal rule of winter skincare, according to Dr James Patel of the Cambridge Skin Clinic, is to apply moisturiser to slightly damp skin immediately after cleansing. "You're essentially locking in water molecules," he explains. "If you wait until your skin is completely dry, you've already lost a significant amount of hydration."</p>
+
+            <blockquote>"Think of moisturiser as a seal, not a source. You need water in the skin before you apply it."<br><em>— Dr James Patel, Cambridge Skin Clinic</em></blockquote>
+
+            <p>He recommends a two-step approach: a lightweight hyaluronic acid serum first, followed by a richer occlusive cream to seal everything in. For very dry skin types, a facial oil applied over the top can provide an additional protective layer overnight.</p>
+
+            <!-- AFFILIZZ WIDGET SLOT 2 -->
+            <div class="affilizz-slot" id="affilizz-slot-2">
+              <!-- Widget Affilizz ici -->
+            </div>
+
+            <h2>Don't skip SPF in winter</h2>
+
+            <p>Perhaps the most common misconception in skincare is that sun protection becomes unnecessary once summer ends. UV radiation — specifically UVA rays — penetrates cloud cover and glass year-round, and is responsible for up to 80% of visible skin ageing, according to the British Association of Dermatologists.</p>
+
+            <p>"I tell every single patient the same thing: SPF every morning, 365 days a year, no exceptions," says Dr Sarah Okonkwo, who runs a private dermatology practice near Parker's Piece. "It is the single most evidence-backed anti-ageing intervention available — and it costs far less than any serum or device."</p>
+
+            <figure>
+              <img src="https://picsum.photos/seed/spf-cream/800/400" alt="SPF50 sunscreen being applied to face"/>
+              <figcaption>Broad-spectrum SPF50 products offer protection against UVA and UVB rays throughout the year. Photo: Unsplash</figcaption>
+            </figure>
+
+            <h2>The ingredients worth spending on</h2>
+
+            <p>With an overwhelming number of products lining pharmacy shelves, knowing which active ingredients are genuinely effective can feel impossible. Our dermatologists agreed on a shortlist of the most evidence-backed compounds:</p>
+
+            <p><strong>Retinol</strong> — still the gold standard for stimulating cell turnover and reducing fine lines. Start with a low concentration (0.025–0.05%) two or three nights a week, and always apply SPF the following morning.</p>
+
+            <p><strong>Niacinamide</strong> — a versatile vitamin B3 derivative that reduces redness, minimises pores and strengthens the skin barrier. Suitable for almost all skin types and compatible with most other actives.</p>
+
+            <p><strong>Vitamin C</strong> — a powerful antioxidant that brightens uneven skin tone and offers some protection against UV-induced free radical damage. Apply in the morning, before SPF.</p>
+
+            <!-- AFFILIZZ WIDGET SLOT 3 -->
+            <div class="affilizz-slot" id="affilizz-slot-3">
+              <!-- Widget Affilizz ici -->
+            </div>
+
+            <p>Whether you're building a routine from scratch or simply optimising what you already own, the consensus from Cambridge's skincare experts is the same: keep it consistent, keep it gentle, and always wear your SPF.</p>
+
           </div>
-        </div>
-        <div class="article-row">
-          <div class="row-img"><img src="https://picsum.photos/seed/cos3/200/120" alt="" /></div>
-          <div>
-            <h3><a href="#">The rise of 'skinimalism': why less is more when it comes to your daily routine</a></h3>
-            <p>Beauty editors and dermatologists alike are advocating for stripped-back, targeted skincare over elaborate multi-step regimes.</p>
+
+          <!-- CATEGORY TAGS -->
+          <div class="CatKey">
+            <a href="#">Skincare</a>
+            <a href="#">Beauty</a>
+            <a href="#">Health</a>
+            <a href="#">Lifestyle</a>
+            <a href="#">Winter</a>
           </div>
-        </div>
-        <div class="article-row">
-          <div class="row-img"><img src="https://picsum.photos/seed/cos4/200/120" alt="" /></div>
-          <div>
-            <h3><a href="#">Hair care beyond shampoo: the scalp treatments transforming dull, thin locks</a></h3>
-            <p>Scalp serums and pre-wash treatments are having a moment — and the results, experts say, are genuinely transformative.</p>
-          </div>
-        </div>
+
+        </article>
       </div>
-    </div>
 
-    <!-- SECTION: Lifestyle -->
-    <div class="article-section">
-      <div class="section-title">Lifestyle</div>
-      <div class="article-grid">
-        <div class="article-card">
-          <div class="card-img"><img src="https://picsum.photos/seed/life1/400/250" alt="" /></div>
-          <div class="card-tag">Lifestyle</div>
-          <h3><a href="#">Morning wellness rituals adopted by Cambridge professionals for a clearer mind and better skin</a></h3>
-          <p>Cold showers, gua sha and vitamin C serums are becoming standard parts of the modern morning routine.</p>
-        </div>
-        <div class="article-card">
-          <div class="card-img"><img src="https://picsum.photos/seed/life2/400/250" alt="" /></div>
-          <div class="card-tag">Shopping</div>
-          <h3><a href="#">Best natural and organic beauty buys available in Cambridge city centre this season</a></h3>
-          <p>From independent boutiques on Mill Road to health food shops off King's Parade, here's where to shop clean beauty locally.</p>
-        </div>
-        <div class="article-card">
-          <div class="card-img"><img src="https://picsum.photos/seed/life3/400/250" alt="" /></div>
-          <div class="card-tag">Wellness</div>
-          <h3><a href="#">Spa days and treatment rooms: a guide to Cambridge's best wellness retreats</a></h3>
-          <p>Whether you're after a deep tissue massage or a facial peel, the city has plenty of options for a proper reset.</p>
-        </div>
+      <!-- ── SIDEBAR ── -->
+      <div class="col-12 col-md-12 col-lg-4 sidebar">
+        <aside>
+          <div class="ArticleSidebar">
+
+            <!-- AD SLOT 1 -->
+            <div class="MPUMulti mb-3">
+              <div class="ad-box">Ad · 300×250</div>
+            </div>
+
+            <!-- MOST READ -->
+            <div class="titleline_color">
+              <span class="title_color">Most Read</span>
+            </div>
+            <ul class="most-read-list mb-4">
+              <li>
+                <span class="num">1</span>
+                <a href="#">Five vitamins that could transform your skin health this winter, according to experts</a>
+              </li>
+              <li>
+                <span class="num">2</span>
+                <a href="#">Cambridge spa named among the top ten wellness destinations in England</a>
+              </li>
+              <li>
+                <span class="num">3</span>
+                <a href="#">Why more Cambridge women are switching to natural and organic cosmetics in 2026</a>
+              </li>
+              <li>
+                <span class="num">4</span>
+                <a href="#">Retinol vs bakuchiol: which anti-ageing ingredient is right for your skin type?</a>
+              </li>
+              <li>
+                <span class="num">5</span>
+                <a href="#">Inside Cambridge's fastest-growing beauty clinic — and the treatments behind the waitlist</a>
+              </li>
+            </ul>
+
+            <!-- PROMO BLOCK -->
+            <div class="promo-block">
+              <img src="https://picsum.photos/seed/velvet-promo/268/150" alt="Velvet Magazine"/>
+              <p>The region's premier beauty and lifestyle magazine — available in print and digital.</p>
+              <a href="#" class="promo-cta">Read the latest issue</a>
+            </div>
+
+            <!-- AD SLOT 2 -->
+            <div class="MPUMulti mb-3">
+              <div class="ad-box">Ad · 300×250</div>
+            </div>
+
+            <!-- PROMO BLOCK 2 -->
+            <div class="promo-block">
+              <img src="https://picsum.photos/seed/wellness-awards/268/150" alt="Wellness Awards"/>
+              <p>Celebrating the best in Cambridge health and beauty — nominate your favourite business.</p>
+              <a href="#" class="promo-cta">Find out more</a>
+            </div>
+
+            <!-- AD SLOT 3 (sticky) -->
+            <div class="MPUMulti mb-3">
+              <div class="ad-box">Ad · 300×250</div>
+            </div>
+
+          </div>
+        </aside>
       </div>
+
     </div>
-
-  </main>
-
-  <!-- ── SIDEBAR ── -->
-  <aside class="sidebar">
-
-    <div class="subscribe-box">
-      <h3>Want unlimited news?</h3>
-      <p>Subscribe to Cambridge Independent for full access to all our health, lifestyle and beauty coverage.</p>
-      <a href="#">Subscribe now</a>
-    </div>
-
-    <div class="sidebar-box promo-box">
-      <div class="box-title">Wellness Awards</div>
-      <img src="https://picsum.photos/seed/award1/280/160" alt="Wellness Awards" />
-      <p>Celebrating the best in Cambridge health and beauty — nominate your favourite business today.</p>
-      <a href="#" class="promo-link">Find out more →</a>
-    </div>
-
-    <div class="sidebar-box promo-box">
-      <div class="box-title">Velvet Magazine</div>
-      <img src="https://picsum.photos/seed/velvet1/280/160" alt="Velvet Magazine" />
-      <p>The region's premier lifestyle and beauty magazine — available in print and digital.</p>
-      <a href="#" class="promo-link">Read the latest issue →</a>
-    </div>
-
-    <div class="sidebar-box promo-box">
-      <div class="box-title">New Homes Guide</div>
-      <img src="https://picsum.photos/seed/homes1/280/160" alt="New Homes" />
-      <p>Discover the latest new-build developments across Cambridgeshire.</p>
-      <a href="#" class="promo-link">View the guide →</a>
-    </div>
-
-    <div class="sidebar-box">
-      <div class="box-title">Science &amp; Tech Awards</div>
-      <img src="https://picsum.photos/seed/sci1/280/140" alt="Science Awards" />
-    </div>
-
-  </aside>
+  </div>
 </div>
 
 <!-- ── FOOTER ── -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-col">
-      <h4>Cambridge Independent</h4>
-      <ul>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">E-edition</a></li>
-        <li><a href="#">Subscribe</a></li>
-        <li><a href="#">Contact us</a></li>
-      </ul>
+  <div class="container">
+
+    <div class="row">
+      <div class="col-12 col-sm-6 col-lg-3">
+        <img src="https://www.cambridgeindependent.co.uk/_assets/iliffe_media_logo.png" class="iliffe-logo" alt="Iliffe Media"/>
+        <div class="footer-social mt-3">
+          <a href="#"><i class="fas fa-rss-square fa-lg"></i></a>
+          <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+          <a href="#"><img src="https://www.cambridgeindependent.co.uk/_assets/twitterx.png" class="FootX" alt="X"/></a>
+        </div>
+      </div>
     </div>
-    <div class="footer-col">
-      <h4>Information</h4>
-      <ul>
-        <li><a href="#">Advertise</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Travel map</a></li>
-        <li><a href="#">Send us a story or picture</a></li>
-        <li><a href="#">Newsletter</a></li>
-      </ul>
+
+    <hr class="custom"/>
+
+    <div class="row">
+      <div class="col-12 col-sm-3 col-lg-3">
+        <ul>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">E-edition</a></li>
+          <li><a href="#">Subscribe</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Consent Preferences (EU user only)</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-3 col-lg-3">
+        <ul>
+          <li><a href="#">Advertise</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Travel map</a></li>
+          <li><a href="#">Send us a story</a></li>
+          <li><a href="#">Newsletter</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-3 col-lg-3">
+        <ul>
+          <li><a href="#">Buy a photo</a></li>
+          <li><a href="#">RSS Feeds</a></li>
+          <li><a href="#">Weather</a></li>
+          <li><a href="#">Find Jobs in Cambridge</a></li>
+          <li><a href="#">Visit East Anglia</a></li>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-3 col-lg-3 text-center">
+        <img src="https://www.cambridgeindependent.co.uk/_assets/ipso25logo.png" class="IPSOLogo" alt="IPSO Regulated"/>
+      </div>
     </div>
-    <div class="footer-col">
-      <h4>Services</h4>
-      <ul>
-        <li><a href="#">Buy a photo</a></li>
-        <li><a href="#">RSS Feeds</a></li>
-        <li><a href="#">Weather</a></li>
-        <li><a href="#">Find Jobs in Cambridge</a></li>
-        <li><a href="#">Visit East Anglia</a></li>
-      </ul>
+
+    <hr class="custom"/>
+
+    <div class="row footer-bottom small">
+      <div class="col-md-6 col-lg-8 text-center text-lg-left">
+        © 2026 – Iliffe Media Limited, Winship Road, Milton, Cambridge, CB24 6PP | 09967892 |
+      </div>
+      <div class="col-md-6 col-lg-4 text-md-right text-center">
+        <a href="#">Terms</a> –
+        <a href="#">Privacy Policy</a> –
+        <a href="#">Sitemap</a>
+      </div>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <div>© 2026 – Iliffe Media Limited, Winship Road, Milton, Cambridge, CB24 6PP | 09967892</div>
-    <div style="margin-top:6px;">
-      <a href="#">Terms</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Sitemap</a>
-    </div>
-    <div style="margin-top:8px;"><span class="ipso">IPSO Regulated</span></div>
+
   </div>
 </footer>
 
