@@ -475,24 +475,32 @@
       margin-top: 30px;
     }
     footer .iliffe-logo {
-      max-width: 150px;
-      filter: brightness(0) invert(1);
-      opacity: .65;
-      margin-bottom: 8px;
+      max-width: 180px;
     }
-    footer .footer-social { display: flex; align-items: center; gap: 14px; margin-top: 10px; }
-    footer .footer-social a { color: #aaa; font-size: 18px; }
-    footer .footer-social a:hover { color: #fff; text-decoration: none; }
-    footer .footer-social .FootX {
-      width: 20px; height: 20px;
-      filter: brightness(0) invert(1); opacity: .6;
+    .footer-top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 4px;
     }
+    footer .footer-social { display: flex; align-items: center; gap: 10px; }
+    footer .footer-social a {
+      display: flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px;
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 4px;
+      color: #fff;
+      font-size: 16px;
+      text-decoration: none;
+    }
+    footer .footer-social a:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
     footer hr.custom { border-color: #555; margin: 20px 0; }
     footer ul { list-style: none; padding: 0; margin: 0; }
     footer ul li { margin-bottom: 9px; }
     footer ul li a { color: #aaa; font-size: 13px; }
     footer ul li a:hover { color: #00adef; text-decoration: none; }
-    .IPSOLogo { max-width: 88px; }
+    .IPSOLogo { max-width: 120px; }
+    .footer-ipso-col { display: flex; align-items: flex-start; justify-content: flex-end; }
     .footer-bottom {
       border-top: 1px solid #444;
       padding: 12px 0;
@@ -833,20 +841,18 @@
 <!-- ══ FOOTER ══ -->
 <footer>
   <div class="container">
-    <div class="row">
-      <div class="col-12 col-sm-6 col-lg-3">
-        <img src="https://www.cambridgeindependent.co.uk/_assets/iliffe_media_logo.png"
-             class="iliffe-logo" alt="Iliffe Media"/>
-        <div class="footer-social">
-          <a href="#"><i class="fas fa-rss-square fa-lg"></i></a>
-          <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
-          <a href="#"><img src="https://www.cambridgeindependent.co.uk/_assets/twitterx.png" class="FootX" alt="X"/></a>
-        </div>
+    <div class="footer-top-row">
+      <img src="https://www.cambridgeindependent.co.uk/_assets/iliffe_media_logo.png"
+           class="iliffe-logo" alt="Iliffe Media"/>
+      <div class="footer-social">
+        <a href="#" aria-label="X / Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="RSS"><i class="fas fa-rss"></i></a>
       </div>
     </div>
     <hr class="custom"/>
     <div class="row">
-      <div class="col-12 col-sm-3">
+      <div class="col-12 col-sm-4 col-lg-3">
         <ul>
           <li><a href="#">About us</a></li>
           <li><a href="#">E-edition</a></li>
@@ -855,7 +861,7 @@
           <li><a href="#">Consent Preferences (EU user only)</a></li>
         </ul>
       </div>
-      <div class="col-12 col-sm-3">
+      <div class="col-12 col-sm-4 col-lg-3">
         <ul>
           <li><a href="#">Advertise</a></li>
           <li><a href="#">Privacy Policy</a></li>
@@ -864,7 +870,7 @@
           <li><a href="#">Newsletter</a></li>
         </ul>
       </div>
-      <div class="col-12 col-sm-3">
+      <div class="col-12 col-sm-4 col-lg-3">
         <ul>
           <li><a href="#">Buy a photo</a></li>
           <li><a href="#">RSS Feeds</a></li>
@@ -873,18 +879,17 @@
           <li><a href="#">Visit East Anglia</a></li>
         </ul>
       </div>
-      <div class="col-12 col-sm-3 text-center">
+      <div class="col-12 col-lg-3 footer-ipso-col">
         <img src="https://www.cambridgeindependent.co.uk/_assets/ipso25logo.png"
              class="IPSOLogo" alt="IPSO Regulated"/>
       </div>
     </div>
-    <hr class="custom"/>
     <div class="row footer-bottom">
-      <div class="col-md-6 col-lg-8 text-center text-lg-left">
-        © 2026 – Iliffe Media Limited, Winship Road, Milton, Cambridge, CB24 6PP | 09967892 |
+      <div class="col-md-6 col-lg-8">
+        © 2026 - Iliffe Media Limited, Winship Road, Milton, Cambridge, CB24 6PP | 09967892 |
       </div>
-      <div class="col-md-6 col-lg-4 text-md-right text-center">
-        <a href="#">Terms</a> – <a href="#">Privacy Policy</a> – <a href="#">Sitemap</a>
+      <div class="col-md-6 col-lg-4 text-md-right">
+        <a href="#">Terms</a> - <a href="#">Privacy Policy</a> - <a href="#">Sitemap</a>
       </div>
     </div>
   </div>
