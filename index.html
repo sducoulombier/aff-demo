@@ -196,6 +196,53 @@
   });
 
   render(clients);
+
+  // ── PASSWORD PROTECTION ──
+  const HASH = "3d3c25e6ed8ed935cad044452794951982add0bba35b65bd645865d406381844";
+
+  async function sha256(str) {
+    const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str));
+    return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, "0")).join("");
+  }
+
+  async function checkAuth() {
+    const stored = sessionStorage.getItem("auth");
+    if (stored === HASH) return;
+
+    const overlay = document.createElement("div");
+    overlay.style.cssText = "position:fixed;inset:0;background:#fff;z-index:9999;display:flex;align-items:center;justify-content:center;";
+    overlay.innerHTML = `
+      <div style="text-align:center;max-width:320px;padding:40px 24px;border:1px solid #e0e0e0;border-radius:10px;box-shadow:0 4px 24px rgba(0,0,0,.08);">
+        <div style="font-size:22px;font-weight:600;margin-bottom:6px;">Client Directory</div>
+        <div style="font-size:13px;color:#888;margin-bottom:24px;">Enter the password to continue</div>
+        <input id="pw-input" type="password" placeholder="Password" style="width:100%;padding:10px 14px;border:1px solid #ddd;border-radius:6px;font-size:14px;outline:none;margin-bottom:10px;" />
+        <div id="pw-error" style="color:#e53935;font-size:12px;min-height:16px;margin-bottom:8px;"></div>
+        <button id="pw-btn" style="width:100%;padding:10px;background:#1a1a1a;color:#fff;border:none;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer;">Continue</button>
+      </div>`;
+    document.body.appendChild(overlay);
+
+    const input = overlay.querySelector("#pw-input");
+    const btn   = overlay.querySelector("#pw-btn");
+    const err   = overlay.querySelector("#pw-error");
+    input.focus();
+
+    async function attempt() {
+      const hash = await sha256(input.value);
+      if (hash === HASH) {
+        sessionStorage.setItem("auth", HASH);
+        overlay.remove();
+      } else {
+        err.textContent = "Incorrect password.";
+        input.value = "";
+        input.focus();
+      }
+    }
+
+    btn.addEventListener("click", attempt);
+    input.addEventListener("keydown", e => { if (e.key === "Enter") attempt(); });
+  }
+
+  checkAuth();
 </script>
 
 </body>
